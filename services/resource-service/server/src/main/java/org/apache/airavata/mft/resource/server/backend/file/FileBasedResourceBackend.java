@@ -429,4 +429,9 @@ public class FileBasedResourceBackend implements ResourceBackend {
     public boolean deleteGDriveResource(GDriveResourceDeleteRequest request) throws Exception {
         throw new UnsupportedOperationException("Operation is not supported in backend");
     }
+
+    @VisibleForTesting
+    protected String getResourceFile() {
+        return resourceFile;
+    }
 }

@@ -34,9 +34,27 @@
 
     <dependencies>
         <dependency>
+            <groupId>org.apache.airavata</groupId>
+            <artifactId>mft-gdrive-transport</artifactId>
+            <version>0.01-SNAPSHOT</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
             <version>3.8.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-api</artifactId>
+            <version>5.5.2</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter</artifactId>
+            <version>RELEASE</version>
             <scope>test</scope>
         </dependency>
     </dependencies>
