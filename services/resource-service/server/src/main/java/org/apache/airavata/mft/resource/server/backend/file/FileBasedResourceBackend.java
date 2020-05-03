@@ -17,6 +17,7 @@
 
  package org.apache.airavata.mft.resource.server.backend.file;
 
+import com.google.common.annotations.VisibleForTesting;
 import org.apache.airavata.mft.resource.server.backend.ResourceBackend;
 import org.apache.airavata.mft.resource.service.*;
 import org.json.simple.JSONArray;
@@ -32,6 +33,11 @@ import java.util.Optional;
 import java.util.stream.Collectors;
 
 public class FileBasedResourceBackend implements ResourceBackend {
+    @VisibleForTesting
+    public void setResourceFile(String resourceFile) {
+        this.resourceFile = resourceFile;
+    }
+
 
     private static final Logger logger = LoggerFactory.getLogger(FileBasedResourceBackend.class);
 

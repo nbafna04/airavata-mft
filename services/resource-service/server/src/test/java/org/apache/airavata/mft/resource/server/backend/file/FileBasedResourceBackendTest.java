@@ -53,14 +53,14 @@ public class FileBasedResourceBackendTest {
 
 
     @Test
-    public void getGDriveResource() {
+    public void getGDriveResource() throws Exception {
         fileBasedResourceBackend = new FileBasedResourceBackend();
         fileBasedResourceBackend.setResourceFile("resources.json");
         GDriveResourceGetRequest request= GDriveResourceGetRequest.newBuilder().build();
         Optional<GDriveResource> gDriveResource=fileBasedResourceBackend.getGDriveResource(request);
         System.out.println(gDriveResource);
         assertNotNull(gDriveResource);
-        assertThat(gDriveResource.isEmpty());
+       // assertThat(gDriveResource.isEmpty());
 
     }
 
