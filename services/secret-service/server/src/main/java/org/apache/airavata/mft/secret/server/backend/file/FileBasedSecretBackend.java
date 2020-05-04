@@ -24,6 +24,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import com.google.common.annotations.VisibleForTesting;
 
 import java.io.*;
 import java.nio.file.Files;
@@ -373,5 +374,8 @@ public class FileBasedSecretBackend implements SecretBackend {
     public boolean deleteGDriveSecret(GDriveSecretDeleteRequest request) throws Exception {
         throw new UnsupportedOperationException("Operation is not supported in backend");
     }
-
+    @VisibleForTesting
+    protected String getSecretFile() {
+        return secretFile;
+    }
 }

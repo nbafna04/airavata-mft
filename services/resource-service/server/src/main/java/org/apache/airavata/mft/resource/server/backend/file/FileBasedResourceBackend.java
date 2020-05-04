@@ -35,6 +35,11 @@ import java.util.stream.Collectors;
 
 @SuppressWarnings("unchecked")
 public class FileBasedResourceBackend implements ResourceBackend {
+    @VisibleForTesting
+    public void setResourceFile(String resourceFile) {
+        this.resourceFile = resourceFile;
+    }
+
 
     private static final Logger logger = LoggerFactory.getLogger(FileBasedResourceBackend.class);
 
@@ -502,5 +507,10 @@ public class FileBasedResourceBackend implements ResourceBackend {
     @Override
     public boolean deleteGDriveResource(GDriveResourceDeleteRequest request) throws Exception {
         throw new UnsupportedOperationException("Operation is not supported in backend");
+    }
+
+    @VisibleForTesting
+    protected String getResourceFile() {
+        return resourceFile;
     }
 }

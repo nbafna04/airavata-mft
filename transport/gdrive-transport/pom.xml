@@ -66,7 +66,6 @@
 			<version>2.0.2-beta</version>
 			<scope>test</scope>
 		</dependency>
-
 		<dependency>
 			<groupId>org.apache.airavata</groupId>
 			<artifactId>mft-resource-service-server</artifactId>
@@ -85,12 +84,15 @@
 			<version>5.2.5.RELEASE</version>
 			<scope>test</scope>
 		</dependency>
+<<<<<<< HEAD
 		<dependency>
 			<groupId>org.apache.airavata</groupId>
 			<artifactId>mft-secret-service-server</artifactId>
 			<version>0.01-SNAPSHOT</version>
 			<scope>test</scope>
 		</dependency>
+=======
+>>>>>>> testing
 	</dependencies>
 </project>
 

@@ -72,6 +72,8 @@ public class GDriveMetadataCollector implements MetadataCollector {
     @Override
     public ResourceMetadata getGetResourceMetadata(String resourceId, String credentialToken) throws Exception {
         checkInitialized();
+
+        System.out.println(resourceId+" .......... "+ credentialToken);
         ResourceServiceGrpc.ResourceServiceBlockingStub resourceClient = ResourceServiceClient.buildClient(resourceServiceHost, resourceServicePort);
         GDriveResource gdriveResource = resourceClient.getGDriveResource(GDriveResourceGetRequest.newBuilder().setResourceId(resourceId).build());
 
