@@ -51,5 +51,4 @@ public class TestConnectorResolver {
             fail("Exception from connector: ", ex);
         }
     }
-
 }
